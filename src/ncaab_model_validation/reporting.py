@@ -19,7 +19,10 @@ from ncaab_model_validation.plotting import plot_fold_mae, plot_pooled_mae
 
 
 def _records(frame: pl.DataFrame) -> list[dict[str, object]]:
-    return [dict(row) for row in frame.iter_rows(named=True)]
+    return [
+        {key: round(value, 10) if isinstance(value, float) else value for key, value in row.items()}
+        for row in frame.iter_rows(named=True)
+    ]
 
 
 def write_results(

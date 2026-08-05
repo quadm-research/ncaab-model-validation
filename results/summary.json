@@ -8,54 +8,54 @@
   "comparisons": [
     {
       "candidate": "elo",
-      "ci_95_high": 1.6493759945451496,
-      "ci_95_low": 1.50743458028154,
-      "mae_improvement": 1.5782668034403768,
+      "ci_95_high": 1.6493759945,
+      "ci_95_low": 1.5074345803,
+      "mae_improvement": 1.5782668034,
       "reference": "baseline",
       "seasons_better": 8,
       "seasons_total": 8
     },
     {
       "candidate": "ridge",
-      "ci_95_high": 1.878062422616408,
-      "ci_95_low": 1.7284151143619884,
-      "mae_improvement": 1.802265995339821,
+      "ci_95_high": 1.8780624226,
+      "ci_95_low": 1.7284151144,
+      "mae_improvement": 1.8022659953,
       "reference": "baseline",
       "seasons_better": 8,
       "seasons_total": 8
     },
     {
       "candidate": "boost",
-      "ci_95_high": 1.9839718692118868,
-      "ci_95_low": 1.8255179520913338,
-      "mae_improvement": 1.9028635011423674,
+      "ci_95_high": 1.9839718692,
+      "ci_95_low": 1.8255179521,
+      "mae_improvement": 1.9028635011,
       "reference": "baseline",
       "seasons_better": 8,
       "seasons_total": 8
     },
     {
       "candidate": "ridge",
-      "ci_95_high": 0.2519283187261822,
-      "ci_95_low": 0.19557605801089356,
-      "mae_improvement": 0.22399919189944403,
+      "ci_95_high": 0.2519283187,
+      "ci_95_low": 0.195576058,
+      "mae_improvement": 0.2239991919,
       "reference": "elo",
       "seasons_better": 8,
       "seasons_total": 8
     },
     {
       "candidate": "boost",
-      "ci_95_high": 0.35756940357193295,
-      "ci_95_low": 0.2918755126694174,
-      "mae_improvement": 0.32459669770198996,
+      "ci_95_high": 0.3575694036,
+      "ci_95_low": 0.2918755127,
+      "mae_improvement": 0.3245966977,
       "reference": "elo",
       "seasons_better": 8,
       "seasons_total": 8
     },
     {
       "candidate": "boost",
-      "ci_95_high": 0.12628473844283675,
-      "ci_95_low": 0.0764334439928804,
-      "mae_improvement": 0.1005975058025459,
+      "ci_95_high": 0.1262847384,
+      "ci_95_low": 0.076433444,
+      "mae_improvement": 0.1005975058,
       "reference": "ridge",
       "seasons_better": 8,
       "seasons_total": 8
@@ -69,32 +69,32 @@
   },
   "pooled_metrics": [
     {
-      "bias": 0.0843584262076509,
+      "bias": 0.0843584262,
       "games": 43326,
-      "mae": 11.21480293511978,
+      "mae": 11.2148029351,
       "model": "baseline",
-      "rmse": 14.376028058145206
+      "rmse": 14.3760280581
     },
     {
-      "bias": 0.22951718964781903,
+      "bias": 0.2295171896,
       "games": 43326,
-      "mae": 9.311939433977413,
+      "mae": 9.311939434,
       "model": "boost",
-      "rmse": 11.83078810828781
+      "rmse": 11.8307881083
     },
     {
-      "bias": 0.2211144466990234,
+      "bias": 0.2211144467,
       "games": 43326,
-      "mae": 9.636536131679403,
+      "mae": 9.6365361317,
       "model": "elo",
-      "rmse": 12.273282765040154
+      "rmse": 12.273282765
     },
     {
-      "bias": 0.21639160578816546,
+      "bias": 0.2163916058,
       "games": 43326,
-      "mae": 9.412536939779958,
+      "mae": 9.4125369398,
       "model": "ridge",
-      "rmse": 11.97748663555803
+      "rmse": 11.9774866356
     }
   ],
   "test_seasons": [

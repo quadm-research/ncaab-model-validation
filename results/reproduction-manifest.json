@@ -32,8 +32,8 @@
     },
     {
       "asset": "summary.json",
-      "bytes": 2861,
-      "sha256": "da0a2fbc5360f29557a699de20c186fc9bb3e44d2401ee91da2f4e2ce53a95c7"
+      "bytes": 2685,
+      "sha256": "b256545872c7e2ac7044efeb5ea39dc4cb330076b61ff37a1741724dd5da71f6"
     },
     {
       "asset": "walk-forward-predictions.parquet",
