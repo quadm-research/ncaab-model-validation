@@ -1,0 +1,63 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Install uv and Python
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b
+        with:
+          version: "0.11.33"
+          python-version: "3.12"
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Verify dependency lock
+        run: uv lock --check
+
+      - name: Install project
+        run: uv sync --all-groups --frozen
+
+      - name: Check formatting
+        run: uv run ruff format --check .
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Type check
+        run: uv run mypy src/ncaab_model_validation
+
+      - name: Test
+        run: uv run pytest -q
+
+      - name: Compile
+        run: uv run python -m compileall -q src tests
+
+      - name: Verify normalized data
+        run: uv run ncaab-validate verify-data
+
+      - name: Reproduce checked-in analysis
+        run: |
+          uv run ncaab-validate analyze --output "${RUNNER_TEMP}/reproduction"
+          for artifact in results/*; do
+            cmp "${artifact}" "${RUNNER_TEMP}/reproduction/$(basename "${artifact}")"
+          done
+
+      - name: Build package
+        run: uv build
