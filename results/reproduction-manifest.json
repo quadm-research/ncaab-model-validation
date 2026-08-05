@@ -37,8 +37,8 @@
     },
     {
       "asset": "walk-forward-predictions.parquet",
-      "bytes": 1407788,
-      "sha256": "61a6c2253a5ba191bfded5b2144e7687ad51463843ccb5f00bb7a3bc997c4439"
+      "bytes": 1409063,
+      "sha256": "d2cbc87e68ae20a4cf870c10aa17b29f8187b0af9cbe49ce5e7d5adfbf0eaa18"
     }
   ],
   "generator": "ncaab-model-validation 0.1.0"

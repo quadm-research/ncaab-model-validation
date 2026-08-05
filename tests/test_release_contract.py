@@ -6,6 +6,7 @@ from pathlib import Path
 import polars as pl
 
 from ncaab_model_validation.data import load_games, sha256_file
+from ncaab_model_validation.reporting import _round_float_columns
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -46,3 +47,13 @@ def test_generated_result_hashes_match_reproduction_manifest() -> None:
         path = ROOT / "results" / artifact["asset"]
         assert path.stat().st_size == artifact["bytes"]
         assert sha256_file(path) == artifact["sha256"]
+
+
+def test_persisted_float_columns_have_a_platform_stable_precision() -> None:
+    values = [1.12345678904, -2.98765432106]
+    frame = pl.DataFrame({"prediction": values, "game_id": ["a", "b"]})
+
+    rounded = _round_float_columns(frame)
+
+    assert rounded["prediction"].to_list() == [round(value, 10) for value in values]
+    assert rounded["game_id"].to_list() == ["a", "b"]

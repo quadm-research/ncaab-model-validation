@@ -17,10 +17,22 @@ from ncaab_model_validation.evaluation import (
 from ncaab_model_validation.models import MODEL_SPECIFICATIONS
 from ncaab_model_validation.plotting import plot_fold_mae, plot_pooled_mae
 
+RESULT_DECIMAL_PLACES = 10
+
+
+def _round_float_columns(frame: pl.DataFrame) -> pl.DataFrame:
+    """Remove platform-level floating-point tails from persisted audit tables."""
+
+    float_columns = [name for name, dtype in frame.schema.items() if dtype.is_float()]
+    return frame.with_columns(pl.col(name).round(RESULT_DECIMAL_PLACES) for name in float_columns)
+
 
 def _records(frame: pl.DataFrame) -> list[dict[str, object]]:
     return [
-        {key: round(value, 10) if isinstance(value, float) else value for key, value in row.items()}
+        {
+            key: round(value, RESULT_DECIMAL_PLACES) if isinstance(value, float) else value
+            for key, value in row.items()
+        }
         for row in frame.iter_rows(named=True)
     ]
 
@@ -36,7 +48,7 @@ def write_results(
     result.fold_metrics.write_csv(output_dir / "fold-metrics.csv", float_precision=10)
     result.pooled_metrics.write_csv(output_dir / "pooled-metrics.csv", float_precision=10)
     result.comparisons.write_csv(output_dir / "mae-comparisons.csv", float_precision=10)
-    result.predictions.write_parquet(
+    _round_float_columns(result.predictions).write_parquet(
         output_dir / "walk-forward-predictions.parquet",
         compression="zstd",
         statistics=True,
