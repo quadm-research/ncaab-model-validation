@@ -1,0 +1,45 @@
+{
+  "artifacts": [
+    {
+      "asset": "fold-metrics.csv",
+      "bytes": 1853,
+      "sha256": "59b765e8d0f146fe8295acf4d15d4a84fc04efe4cc70e3b2b7732b0d2104aa6d"
+    },
+    {
+      "asset": "mae-by-season.svg",
+      "bytes": 52770,
+      "sha256": "61053155c5f5cf5c8d7e784b741c2835122539fe1257e07f336934bc828572cc"
+    },
+    {
+      "asset": "mae-comparisons.csv",
+      "bytes": 419,
+      "sha256": "2a4495edd38500ac16a4618171172e614a121e572a7b81cd218fb32376720f1b"
+    },
+    {
+      "asset": "point-in-time-features.parquet",
+      "bytes": 3899963,
+      "sha256": "d7fa1a0e964da71a6ac0417f8a54f3ddc3291c776a22264aed874c967da609bf"
+    },
+    {
+      "asset": "pooled-mae.svg",
+      "bytes": 41902,
+      "sha256": "111cc10debeab523d58c370753b6b3a7c8bd11a8e126e31fab9f4768455675c3"
+    },
+    {
+      "asset": "pooled-metrics.csv",
+      "bytes": 236,
+      "sha256": "dcada5f8887969243aca40059674660d9320f34f55658fe0eb402b6d130e7d8e"
+    },
+    {
+      "asset": "summary.json",
+      "bytes": 2861,
+      "sha256": "da0a2fbc5360f29557a699de20c186fc9bb3e44d2401ee91da2f4e2ce53a95c7"
+    },
+    {
+      "asset": "walk-forward-predictions.parquet",
+      "bytes": 1407788,
+      "sha256": "61a6c2253a5ba191bfded5b2144e7687ad51463843ccb5f00bb7a3bc997c4439"
+    }
+  ],
+  "generator": "ncaab-model-validation 0.1.0"
+}

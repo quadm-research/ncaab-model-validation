@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "College Basketball Model Validation"
+type: software
+authors:
+  - family-names: VanBenthuysen
+    given-names: Pete
+    affiliation: QuadM Research
+    email: pete@quadmresearch.com
+version: 0.1.0
+date-released: 2026-08-05
+license: MIT
+repository-code: "https://github.com/quadm-research/ncaab-model-validation"
+url: "https://github.com/quadm-research/ncaab-model-validation"

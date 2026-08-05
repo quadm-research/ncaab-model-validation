@@ -1,0 +1,123 @@
+{
+  "build_report": {
+    "completed_rows": 70928,
+    "duplicate_game_rows": 0,
+    "eligible_rows": 65360,
+    "final_rows": 70912,
+    "first_season": 2015,
+    "forfeit_rows": 16,
+    "inactive_team_rows": 5552,
+    "last_season": 2026,
+    "missing_core_rows": 0,
+    "non_division_one_rows": 0,
+    "raw_rows": 70992
+  },
+  "dataset": {
+    "asset": "games.parquet",
+    "bytes": 793299,
+    "columns": [
+      "game_id",
+      "season",
+      "game_datetime",
+      "game_date",
+      "home_id",
+      "home_team",
+      "away_id",
+      "away_team",
+      "home_score",
+      "away_score",
+      "neutral_site"
+    ],
+    "sha256": "5cd668615548218e16427d344d61d8d69ae601fec68414003c69f1b423411a69"
+  },
+  "license": "CC-BY-4.0",
+  "snapshot_date": "2026-08-05",
+  "source": "SportsDataverse/hoopR processed ESPN men's college basketball schedules",
+  "source_release_tag": "espn_mens_college_basketball_schedules",
+  "sources": [
+    {
+      "asset": "mbb_schedule_2015.parquet",
+      "bytes": 618686,
+      "season": 2015,
+      "sha256": "3c7aa3002e0417aa74d15533cd7a1dbdcf4f599297c3997116cdb30f07905cab",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2015.parquet"
+    },
+    {
+      "asset": "mbb_schedule_2016.parquet",
+      "bytes": 617730,
+      "season": 2016,
+      "sha256": "9b401f9905bd97e032b99ba5899cd65ff3b4e6b44edab1f36618908a3b0152ff",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2016.parquet"
+    },
+    {
+      "asset": "mbb_schedule_2017.parquet",
+      "bytes": 593064,
+      "season": 2017,
+      "sha256": "ce90db03f344f6a12c44155f2f70534a7df9e9f56f5c5bb38e6c292149388802",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2017.parquet"
+    },
+    {
+      "asset": "mbb_schedule_2018.parquet",
+      "bytes": 623847,
+      "season": 2018,
+      "sha256": "2ec927051e55807a7d02d5f176576cf7a29a5ee2b7471817e2ced43a38aa0aa5",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2018.parquet"
+    },
+    {
+      "asset": "mbb_schedule_2019.parquet",
+      "bytes": 627071,
+      "season": 2019,
+      "sha256": "c285df779882719857048b1478c15d21868f4fdbe7d7d75d2ecb4f4ab970fb71",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2019.parquet"
+    },
+    {
+      "asset": "mbb_schedule_2020.parquet",
+      "bytes": 598411,
+      "season": 2020,
+      "sha256": "f87d7a04d905c95221b1201a4fd43bdf9bad3bfae7b3f880800e9eb8ae1cfa3a",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2020.parquet"
+    },
+    {
+      "asset": "mbb_schedule_2021.parquet",
+      "bytes": 465503,
+      "season": 2021,
+      "sha256": "26b26e9fd035a567ca66e65fadd8a3df9482e25e4a1c63ff40466e0d99c9cc76",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2021.parquet"
+    },
+    {
+      "asset": "mbb_schedule_2022.parquet",
+      "bytes": 621024,
+      "season": 2022,
+      "sha256": "75a702d5c8db85bfd7ad30bc046a801742b88ac3f7a900d7e05450a6a4c10276",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2022.parquet"
+    },
+    {
+      "asset": "mbb_schedule_2023.parquet",
+      "bytes": 1039184,
+      "season": 2023,
+      "sha256": "1a75500bd669a2e0f01b39623a1aa28d8d4cc1b8658f8adbabfc5319c73c496c",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2023.parquet"
+    },
+    {
+      "asset": "mbb_schedule_2024.parquet",
+      "bytes": 1024630,
+      "season": 2024,
+      "sha256": "27889ecf392a9a6281e7898dc39d51a2f4a4576f689533dda0d67c4d57d52602",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2024.parquet"
+    },
+    {
+      "asset": "mbb_schedule_2025.parquet",
+      "bytes": 1433410,
+      "season": 2025,
+      "sha256": "e01bf54b51c8d71b00cd8144e9a022ed170af2c2e57787b1cef672340891c45b",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2025.parquet"
+    },
+    {
+      "asset": "mbb_schedule_2026.parquet",
+      "bytes": 1761833,
+      "season": 2026,
+      "sha256": "480896940f9502e537513386efa1ece6ed9cac0bcd8bd30f3493aa6254912aec",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_schedules/mbb_schedule_2026.parquet"
+    }
+  ]
+}

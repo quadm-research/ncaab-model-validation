@@ -1,0 +1,110 @@
+{
+  "bootstrap": {
+    "cluster": "source game_date within test season",
+    "confidence_interval": 0.95,
+    "repetitions": 5000,
+    "seed": 20260805
+  },
+  "comparisons": [
+    {
+      "candidate": "elo",
+      "ci_95_high": 1.6493759945451496,
+      "ci_95_low": 1.50743458028154,
+      "mae_improvement": 1.5782668034403768,
+      "reference": "baseline",
+      "seasons_better": 8,
+      "seasons_total": 8
+    },
+    {
+      "candidate": "ridge",
+      "ci_95_high": 1.878062422616408,
+      "ci_95_low": 1.7284151143619884,
+      "mae_improvement": 1.802265995339821,
+      "reference": "baseline",
+      "seasons_better": 8,
+      "seasons_total": 8
+    },
+    {
+      "candidate": "boost",
+      "ci_95_high": 1.9839718692118868,
+      "ci_95_low": 1.8255179520913338,
+      "mae_improvement": 1.9028635011423674,
+      "reference": "baseline",
+      "seasons_better": 8,
+      "seasons_total": 8
+    },
+    {
+      "candidate": "ridge",
+      "ci_95_high": 0.2519283187261822,
+      "ci_95_low": 0.19557605801089356,
+      "mae_improvement": 0.22399919189944403,
+      "reference": "elo",
+      "seasons_better": 8,
+      "seasons_total": 8
+    },
+    {
+      "candidate": "boost",
+      "ci_95_high": 0.35756940357193295,
+      "ci_95_low": 0.2918755126694174,
+      "mae_improvement": 0.32459669770198996,
+      "reference": "elo",
+      "seasons_better": 8,
+      "seasons_total": 8
+    },
+    {
+      "candidate": "boost",
+      "ci_95_high": 0.12628473844283675,
+      "ci_95_low": 0.0764334439928804,
+      "mae_improvement": 0.1005975058025459,
+      "reference": "ridge",
+      "seasons_better": 8,
+      "seasons_total": 8
+    }
+  ],
+  "model_specifications": {
+    "baseline": "training-only mean home margin, split by neutral-site status",
+    "boost": "HistGradientBoostingRegressor(learning_rate=0.05, max_iter=200, max_leaf_nodes=15, min_samples_leaf=100, l2_regularization=10, random_state=42)",
+    "elo": "standardized Ridge(alpha=10) on pregame Elo difference and neutral flag",
+    "ridge": "standardized Ridge(alpha=10) on the frozen point-in-time feature set"
+  },
+  "pooled_metrics": [
+    {
+      "bias": 0.0843584262076509,
+      "games": 43326,
+      "mae": 11.21480293511978,
+      "model": "baseline",
+      "rmse": 14.376028058145206
+    },
+    {
+      "bias": 0.22951718964781903,
+      "games": 43326,
+      "mae": 9.311939433977413,
+      "model": "boost",
+      "rmse": 11.83078810828781
+    },
+    {
+      "bias": 0.2211144466990234,
+      "games": 43326,
+      "mae": 9.636536131679403,
+      "model": "elo",
+      "rmse": 12.273282765040154
+    },
+    {
+      "bias": 0.21639160578816546,
+      "games": 43326,
+      "mae": 9.412536939779958,
+      "model": "ridge",
+      "rmse": 11.97748663555803
+    }
+  ],
+  "test_seasons": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ]
+}
